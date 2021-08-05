@@ -1,0 +1,74 @@
+/** @format */
+
+body {
+	background-color: rgb(6, 26, 27);
+}
+* {
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1200px;
+	margin: 60px auto;
+}
+.container h1 {
+	text-align: center;
+	color: white;
+}
+form {
+	background-color: white;
+	padding: 30px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+form .input-group {
+	margin-bottom: 15px;
+}
+form label {
+	display: block;
+	margin-bottom: 10px;
+}
+form input {
+	padding: 12px 20px;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+.submit-btn {
+	width: 100%;
+	border: none;
+	background: rgb(37, 83, 3);
+	font-size: 18px;
+	color: white;
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.images {
+	background-color: white;
+	padding: 20px;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+}
+
+.images .image {
+	width: 100%;
+}
+
+.images img {
+	width: 100%;
+}
+
+.get-images-btn {
+	background-color: rgb(37, 83, 3);
+	color: white;
+	padding: 20px;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	margin: 0 auto 20px;
+	display: block;
+}
