@@ -28,7 +28,6 @@ function getImages() {
 		})
 		.then((json) => {
 			const images = json.map((image) => {
-				// return `<img src="${image.url}" alt="${image.name}" />`;
 				return `<div class="image">
                     <img src="${image.transformedUrl}" alt="${image.name}" />
                 </div>`;
