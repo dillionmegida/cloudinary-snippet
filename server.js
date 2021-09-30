@@ -1,5 +1,3 @@
-/** @format */
-
 require("dotenv").config();
 const multer = require("multer");
 const express = require("express");
@@ -53,22 +51,20 @@ function listImages(req, res) {
 							use_root_path: true,
 							transformation: [
 								{ width: 500, crop: "scale" },
-								{ overlay: "radialize", effect: "displace", x: 20 },
-								// {
-								// 	overlay: "cloudinary-test/793f98b28296d5616a117fed880bde78",
-								// 	// effect: "displace",
-								// 	width: 250,
-								// 	height: 250,
-								// 	y: 20,
-								// 	x: 20,
-								// 	// angle: 90,
-								// },
+								{
+									overlay: "sticker",
+									width: 100,
+									height: 100,
+									crop: "pad",
+									y: 10,
+								},
+								{ overlay: "gradients:gradient2" },
+								{ flags: "layer_apply", effect: "displace", y: 2 },
+								{ flags: "layer_apply", x: 2, background: "transparent" },
 							],
 						})
 						.replace("<img src='", "")
 						.replace("' />", "");
-
-					console.log(transformedUrl);
 
 					return { transformedUrl, ...r };
 				});
